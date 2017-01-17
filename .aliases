@@ -1,0 +1,35 @@
+# LS with colors.
+alias ls='ls -G'
+
+# Shortcuts
+alias sites="cd ~/Sites"
+
+# Bash Profile
+alias profile="$EDITOR ~/.bash_profile"
+alias refresh="source ~/.bash_profile"
+
+# Development
+alias vssh="airlab ssh"
+alias vbox="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
+alias android-device-monitor="~/Library/Android/sdk/tools/monitor &"
+alias react-clear-cache="rm -fr $TMPDIR/react-*"
+
+# Git
+alias gs="git status"
+alias ga="git add --all"
+alias gb="git branch"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gco="git checkout"
+alias gcob="git checkout -b"
+alias amend="git commit --amend"
+alias grm="git rm"
+alias gup="git fetch origin && git rebase origin/master"
+alias git-rm-merged="git branch --merged | egrep -v '(^\*|master|dev)' | xargs git branch -d"
+
+# Ruby/Gems
+alias be="bundle exec"
+alias mux="tmuxinator"
+
+# Goldkey
+alias rekey="goldkey -t 3600"
