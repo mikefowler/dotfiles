@@ -12,6 +12,9 @@ brew upgrade
 brew install tmux
 gem install tmuxinator
 
+# Install Bash completion
+brew install bash-completion
+
 # Install Vundle vim plugin manager and then install plugins
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vim +PluginInstall +qall
