@@ -17,7 +17,7 @@ alias react-clear-cache="rm -fr $TMPDIR/react-*"
 # Git
 alias gs="git status"
 alias ga="git add --all"
-alias gp="git add -p"
+alias gap="git add -p"
 alias gb="git branch"
 alias gd="git diff"
 alias gdc="git diff --cached"
