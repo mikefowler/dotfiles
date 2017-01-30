@@ -1,7 +1,10 @@
 [alias]
   s = status
   d = diff
+  dc = diff --cached
   a = add
+  aa = add --all
+  ap = add -p
   co = checkout
   b = branch
   ba = branch -a
@@ -15,6 +18,9 @@
   cp = cherry-pick
   up = !git fetch origin && git rebase origin/master
   checkoutr = checkout
+  amend = commit --amend
+  cob = checkout -b
+  bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
 
 [color]
   ui = true

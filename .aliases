@@ -45,6 +45,8 @@ alias -- -="cd -"
 
 # Shortcuts
 alias sites="cd ~/Sites"
+alias dropbox="cd ~/Dropbox"
+alias github="cd ~/Github"
 
 # Reload the bash profile
 alias refresh="source ~/.bash_profile"
@@ -61,11 +63,7 @@ alias gcob="git checkout -b"
 alias gam="git commit --amend"
 alias grm="git rm"
 alias gup="git up"
-alias grmb="git branch --merged | egrep -v '(^\*|master|dev)' | xargs git branch -d"
 
 # Ruby/Gems
 alias be="bundle exec"
 alias mux="tmuxinator"
-
-# Goldkey
-alias rekey="goldkey -t 3600"
