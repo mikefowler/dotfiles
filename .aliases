@@ -63,6 +63,9 @@ alias gcob="git checkout -b"
 alias gam="git commit --amend"
 alias grm="git rm"
 alias gup="git up"
+alias gl="git log"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
 
 # Ruby/Gems
 alias be="bundle exec"

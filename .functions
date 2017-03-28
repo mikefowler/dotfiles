@@ -97,7 +97,7 @@ function server() {
 # (Requires PHP 5.4.0+.)
 function phpserver() {
 	local port="${1:-4000}";
-	local ip=$(ipconfig getifaddr en1);
+	local ip=$(ipconfig getifaddr en0);
 	sleep 1 && open "http://${ip}:${port}/" &
 	php -S "${ip}:${port}";
 }
@@ -307,4 +307,21 @@ _git_checkout () {
 
 		;;
 	esac
+}
+
+# Git checkout helper with fuzzy matching
+gitco() {
+    git branch
+    echo "Branch to checkout? (Fuzzy searching from left to right with space support)"
+    read branch
+    branches=$(git branch | egrep -i "${branch// /.*}" | tr -d ' ')
+    count=$(echo "$branches" | egrep -c ".")
+    if [ "$count" = "1" ]; then
+        git checkout $(echo $branches | tr -d '\n' | tr -d '*')
+    elif [[ "$count" = "0" ]]; then
+        echo "No branches matched"
+    else
+        echo "Need to match a single branch. Found these:"
+        echo "$branches"
+    fi
 }
