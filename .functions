@@ -260,11 +260,11 @@ function git-log () {
 # Usage: `gh mikefowler/dotfiles`
 
 function gh() {
-  cd ~/Github/$1
-}
-
-function ghe() {
-  cd ~/Github/GHE/$1/$2
+  if [ $# -eq 0 ]; then
+    github
+	else
+		github && cd $1
+	fi;
 }
 
 # List installed NPM modules *without* dependencies

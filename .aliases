@@ -44,9 +44,9 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias sites="cd ~/Sites"
+alias code="cd ~/Code"
 alias dropbox="cd ~/Dropbox"
-alias github="cd ~/Github"
+alias github="cd ~/Code/Github"
 
 # Reload the bash profile
 alias refresh="source ~/.bash_profile"

@@ -1,16 +1,23 @@
 #!/usr/bin/env bash
 
-# Install command-line tools using Homebrew.
+# Install Homebrew
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# Make sure we’re using the latest Homebrew.
+# Homebrew
 brew update
-
-# Upgrade any already-installed formulae.
 brew upgrade
+
+# Install rbenv + Ruby, and then set it as the global default
+brew install rbenv
+rbenv install 2.4.1
+rbenv global 2.4.1
 
 # Install Tmux and Tmuxinator.
 brew install tmux
 gem install tmuxinator
+
+# Install Tmux Plugin Manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Install Bash completion
 brew install bash-completion
