@@ -187,16 +187,6 @@ function getcertnames() {
 	fi;
 }
 
-# `s` with no arguments opens the current directory in Sublime Text, otherwise
-# opens the given location
-function s() {
-	if [ $# -eq 0 ]; then
-		subl .;
-	else
-		subl "$@";
-	fi;
-}
-
 # `a` with no arguments opens the current directory in Atom Editor, otherwise
 # opens the given location
 function a() {
@@ -310,18 +300,40 @@ _git_checkout () {
 }
 
 # Git checkout helper with fuzzy matching
-gitco() {
-    git branch
-    echo "Branch to checkout? (Fuzzy searching from left to right with space support)"
-    read branch
+checkout() {
+    printf "\nYour local branches are:\n"
+    git branch | sed -e 's/*/  */'
+    printf "\n"
+
+    read -p "Which branch would you like to checkout? " branch
+
     branches=$(git branch | egrep -i "${branch// /.*}" | tr -d ' ')
     count=$(echo "$branches" | egrep -c ".")
+
     if [ "$count" = "1" ]; then
         git checkout $(echo $branches | tr -d '\n' | tr -d '*')
     elif [[ "$count" = "0" ]]; then
-        echo "No branches matched"
+        printf "\n"
+        read -p "No branches matched. Try again? (y/n) " -n 1;
+        if [[ $REPLY =~ ^[Yy]$ ]]; then
+          printf "\n"
+          checkout;
+        fi;
     else
-        echo "Need to match a single branch. Found these:"
+        echo "Your query matched multiple branches:"
         echo "$branches"
     fi
+}
+
+branch() {
+  read -p "What is your new branch called? " branch
+
+  if [ -z "$branch" ]; then
+    echo "Try again…"
+    gitcob
+    return
+  fi
+
+  git fetch origin master
+  git checkout -b $branch origin/master
 }
