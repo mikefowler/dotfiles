@@ -301,11 +301,15 @@ _git_checkout () {
 
 # Git checkout helper with fuzzy matching
 checkout() {
-    printf "\nYour local branches are:\n"
-    git branch | sed -e 's/*/  */'
-    printf "\n"
+    if [ -z "${1}" ]; then
+      printf "\nYour local branches are:\n"
+      git branch | sed -e 's/*/  */'
+      printf "\n"
 
-    read -p "Which branch would you like to checkout? " branch
+      read -p "Which branch would you like to checkout? " branch
+    else
+      branch=$1
+    fi
 
     branches=$(git branch | egrep -i "${branch// /.*}" | tr -d ' ')
     count=$(echo "$branches" | egrep -c ".")
@@ -326,7 +330,11 @@ checkout() {
 }
 
 branch() {
-  read -p "What is your new branch called? " branch
+  if [ -z "${1}" ]; then
+    read -p "What is your new branch called? " branch
+  else
+    branch=$1
+  fi
 
   if [ -z "$branch" ]; then
     echo "Try again…"
