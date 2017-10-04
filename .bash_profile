@@ -25,10 +25,10 @@ elif [ -f /etc/bash_completion ]; then
 fi;
 
 # Enable Git completion
-test -f ~/.git-completion.bash && . $_
+source ~/.git-completion.bash
 
 # Enable NPM completion
-test -f ~/.npm-completion.bash && . $_
+source ~/.npm-completion.bash
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
