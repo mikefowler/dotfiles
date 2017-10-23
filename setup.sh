@@ -18,6 +18,7 @@ if [ "$(uname)" == "Darwin" ]; then
   # Install Tmux and Tmuxinator.
   brew install tmux
   gem install tmuxinator
+  brew install reattach-to-user-namespace
 
   # Install Bash completion
   brew install bash-completion

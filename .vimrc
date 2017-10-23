@@ -41,6 +41,9 @@ set ignorecase
 set smartcase
 set hlsearch
 
+" Ensure copy/paste works between Vim and system clipboard
+set clipboard=unnamed
+
 " Ignore these file types
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
