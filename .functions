@@ -225,6 +225,13 @@ function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
 
+# List all colors available in Bash/tmux
+function colors() {
+  for i in {0..255}; do
+    printf "\x1b[38;5;${i}mcolour${i}\x1b[0m\n"
+  done
+}
+
 # git-who tells you who the authors are. It is generally most useful when given
 # a path:
 #
