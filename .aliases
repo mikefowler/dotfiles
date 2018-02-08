@@ -44,7 +44,6 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Shortcuts
-alias code="cd ~/Code"
 alias dropbox="cd ~/Dropbox"
 alias github="cd ~/Code/Github"
 
