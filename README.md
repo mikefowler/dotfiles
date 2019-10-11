@@ -5,7 +5,7 @@
 ----
 
 1. Clone this repository
-1. Install the font and Terminal theme in `/assets`
+1. Install the font in `/fonts`, and the Terminal theme in `/assets`
   - Open `Terminal > Preferences`
   - Select the theme in the sidebar and click “Default”
   - Under the “Font” section, choose “Inconsolata-dz”

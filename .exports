@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-# Make Atom the default editor
-export REACT_EDITOR='atom';
-export EDITOR='atom';
-
-# Make vim the default editor.
+# Set the default code editors
+export REACT_EDITOR='code';
 export EDITOR='vim';
 
 # Enable persistent REPL history for `node`.
@@ -36,3 +33,6 @@ export MANPAGER='less -X';
 # Enables Node Version Manager
 export NVM_DIR="/Users/mike_fowler/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8

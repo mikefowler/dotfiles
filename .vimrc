@@ -10,14 +10,12 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
-" Plugin 'kien/ctrlp.vim'
-Bundle 'cakebaker/scss-syntax.vim'
+Plugin 'kien/ctrlp.vim'
 Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'scrooloose/syntastic'
-Bundle 'closetag.vim'
 Plugin 'flazz/vim-colorschemes'
-Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'junegunn/fzf.vim'
+Bundle 'L9'
 call vundle#end()
 
 " Settings
@@ -53,8 +51,11 @@ filetype plugin indent on
 
 " Color scheme
 syntax enable
+" let g:onedark_termcolors=256
+let g:onedark_terminal_italics=1
+let g:onedark_hide_endofbuffer=1
 set background=dark
-colorscheme solarized
+colorscheme onedark
 
 " Key bindings
 """"""""""""""
