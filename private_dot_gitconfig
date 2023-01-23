@@ -1,0 +1,8 @@
+[push]
+	autoSetupRemote = true
+	default = current
+[rerere]
+	enabled = true
+[core]
+	precomposeunicode = true
+	excludesfile = /Users/mike_fowler/.gitignore_global
