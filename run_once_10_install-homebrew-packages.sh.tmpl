@@ -14,14 +14,12 @@ formulae=(
   thefuck
 )
 
-casks=(
-  
-)
+# casks=()
 
 brew update
 
 brew install ${formulae[@]}
-brew install --cask ${casks[@]}
+# brew install --cask ${casks[@]}
 
 brew cleanup
 {{ end }}
