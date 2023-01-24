@@ -24,7 +24,8 @@ antigen bundle ael-code/zsh-colored-man-pages
 antigen bundle b4b4r07/enhancd
 
 # Load the theme.
-antigen theme romkatv/powerlevel10k
+THEME=romkatv/powerlevel10k
+[[ `antigen list | grep $THEME | wc -l` -gt 0 ]] || antigen theme $THEME
 
 # Tell Antigen that you're done.
 antigen apply
