@@ -53,4 +53,9 @@ if [ -e ~/.airlab/shellhelper.sh ]; then
 fi
 # AIRLAB-DO-NOT-MODIFY section:ShellWrapper }}}
 
+# Initialize pyenv if it's installed
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
 export PATH="/opt/homebrew/bin:$PATH"
