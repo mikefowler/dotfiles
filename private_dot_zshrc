@@ -33,7 +33,7 @@ source ~/antigen.zsh
 antigen init ~/.antigenrc
 
 # Aliases
-alias cof = "!checkout_fzf() { git branch | fzf | xargs git checkout; }; checkout_fzf"
+alias cof="git branch | fzf | xargs git checkout"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
