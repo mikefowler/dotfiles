@@ -50,3 +50,5 @@ if [ -e ~/.airlab/shellhelper.sh ]; then
   source ~/.airlab/shellhelper.sh
 fi
 # AIRLAB-DO-NOT-MODIFY section:ShellWrapper }}}
+
+export PATH="/opt/homebrew/bin:$PATH"
