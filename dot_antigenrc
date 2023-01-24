@@ -15,7 +15,6 @@ antigen bundle autojump
 antigen bundle colorize
 antigen bundle magic-enter
 antigen bundle safe-paste
-antigen bundle thefuck
 
 # Additional bundles
 antigen bundle zsh-users/zsh-syntax-highlighting

@@ -26,7 +26,9 @@ SAVEHIST=10000000
 HISTFILE=~/.zsh_history
 
 # Platform specific customizations
-source ~/.platformrc
+if [ -f ~/.platformrc ]; then
+    source ~/.platformrc
+fi
 
 # Use antigen for plugins
 source ~/antigen.zsh
