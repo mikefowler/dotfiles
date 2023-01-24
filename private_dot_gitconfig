@@ -1,13 +1,11 @@
 [push]
-	autoSetupRemote = true
-	default = current
+  autoSetupRemote = true
+  default = current
 [rerere]
   enabled = true
 [user]
   name = Mike Fowler
   email = mike.fowler@ext.airbnb.com
 [core]
-	precomposeunicode = true
+  precomposeunicode = true
   excludesfile = /Users/mike_fowler/.gitignore_global
-[alias]
-  cof = "!checkout_fzf() { git branch | fzf | xargs git checkout; }; checkout_fzf"
