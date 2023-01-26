@@ -1,0 +1,16 @@
+# Plugins
+robbyrussell/oh-my-zsh
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/command-not-found
+robbyrussell/oh-my-zsh path:plugins/autojump
+robbyrussell/oh-my-zsh path:plugins/colorize
+robbyrussell/oh-my-zsh path:plugins/magic-enter
+robbyrussell/oh-my-zsh path:plugins/safe-paste
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-completions
+ael-code/zsh-colored-man-pages
+b4b4r07/enhancd
+
+# Theme
+romkatv/powerlevel10k

@@ -4,3 +4,10 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "168h"
+
+[".vim_runtime"]
+    type = "archive"
+    url = "https://github.com/amix/vimrc/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "168h"
