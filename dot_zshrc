@@ -10,8 +10,9 @@ source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
 antibody bundle romkatv/powerlevel10k
 
-# Initialize rbenv
-eval "$(rbenv init - zsh)"
+# Load chruby
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 # Enable Zsh completion
 autoload -U compinit; compinit
