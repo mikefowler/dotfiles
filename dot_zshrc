@@ -46,7 +46,7 @@ if [ -f ~/.platformrc ]; then
 fi
 
 # Aliases
-alias cof="git branch | fzf | xargs git checkout"
+alias gco="git branch | fzf | xargs git checkout"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
