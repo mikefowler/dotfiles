@@ -1,0 +1,24 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+casks=(
+  visual-studio-code  # https://code.visualstudio.com/
+  spotify             # http://spotify.com/
+  zoom                # https://zoom.us/
+  obsidian            # https://obsidian.md/
+  calibre             # https://calibre-ebook.com/
+  1password           # https://1password.com/
+  caffeine            # https://intelliscapesolutions.com/apps/caffeine
+  rectangle           # https://rectangleapp.com/
+  slack               # https://slack.com/
+  vlc                 # https://www.videolan.org/vlc/
+)
+
+brew update
+
+brew install --cask ${casks[@]}
+
+brew cleanup
+{{ end -}}

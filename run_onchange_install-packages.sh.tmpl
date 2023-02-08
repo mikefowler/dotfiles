@@ -1,0 +1,27 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+set -eufo pipefail
+
+formulae=(
+  autojump          # https://github.com/wting/autojump
+  curl              # https://curl.se/
+  fzf               # https://github.com/junegunn/fzf
+  git               # https://git-scm.com/
+  nvm               # https://github.com/nvm-sh/nvm
+  wget              # https://www.gnu.org/software/wget/
+  yarn              # https://yarnpkg.com/
+  antidote          # https://getantidote.github.io/
+  chruby            # https://github.com/postmodern/chruby
+  ruby-install      # https://github.com/postmodern/ruby-install
+)
+
+# casks=()
+
+brew update
+
+brew install ${formulae[@]}
+# brew install --cask ${casks[@]}
+
+brew cleanup
+{{ end -}}
