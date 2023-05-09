@@ -3,6 +3,8 @@
 
 set -eufo pipefail
 
+sudo apt-get install build-essential
+
 formulae=(
   autojump          # https://github.com/wting/autojump
   curl              # https://curl.se/
@@ -14,6 +16,7 @@ formulae=(
   chruby            # https://github.com/postmodern/chruby
   ruby-install      # https://github.com/postmodern/ruby-install
   pyenv             # https://github.com/pyenv/pyenv
+  gcc               # https://gcc.gnu.org/
 )
 
 brew update
