@@ -1,8 +1,21 @@
 # dotfiles
 
+First, create the Chezmoi config file:
+
+```bash
+touch ~/.config/chezmoi/chezmoi.toml
+```
+
+Update its contents with the following:
+
+```toml
+[data]
+  email = "replace@me.com"
+```
+
 To set up Chezmoi and dotfiles on a new machine, run:
 
-```
+```bash
 sh -c "$(curl -fsLS git.io/chezmoi)" -- init --apply mikefowler
 ```
 
