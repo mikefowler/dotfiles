@@ -5,7 +5,6 @@ set -eufo pipefail
 sudo apt-get install build-essential
 
 formulae=(
-  chezmoi
   autojump          # https://github.com/wting/autojump
   curl              # https://curl.se/
   fzf               # https://github.com/junegunn/fzf
