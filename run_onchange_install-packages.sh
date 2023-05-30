@@ -21,6 +21,5 @@ formulae=(
 brew update
 
 brew install ${formulae[@]}
-# brew install --cask ${casks[@]}
 
 brew cleanup
