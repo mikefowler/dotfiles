@@ -2,8 +2,6 @@
 
 set -eufo pipefail
 
-sudo apt-get install build-essential
-
 formulae=(
   autojump          # https://github.com/wting/autojump
   curl              # https://curl.se/
