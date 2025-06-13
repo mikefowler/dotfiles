@@ -16,8 +16,8 @@ formulae=(
   gcc               # https://gcc.gnu.org/
 )
 
-brew update
-
-brew install ${formulae[@]}
-
-brew cleanup
+if [ -f /opt/homebrew/bin/brew ]; then
+  brew update
+  brew install ${formulae[@]}
+  brew cleanup
+fi
