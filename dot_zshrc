@@ -14,8 +14,7 @@ if [ -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
 fi
 
 # Set up Antidote for shell plugin management
-# source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
-source ${ZDOTDIR:-~}/.antidote/antidote.zsh
+source $(brew --prefix)/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
 # Load chruby
