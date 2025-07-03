@@ -14,7 +14,8 @@ if [ -f /home/linuxbrew/.linuxbrew/bin/brew ]; then
 fi
 
 # Set up Antidote for shell plugin management
-if [ -f "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh" ]; then
+if command -v brew >/dev/null 2>&1 && \
+   [ -f "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh" ]; then
   source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
 elif [ -f "${ZDOTDIR:-~}/.antidote/antidote.zsh" ]; then
   source "${ZDOTDIR:-~}/.antidote/antidote.zsh"
