@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 # Link up external tmux config
 # https://github.com/gpakosz/.tmux
