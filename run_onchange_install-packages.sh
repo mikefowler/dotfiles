@@ -20,4 +20,7 @@ if [ -f /opt/homebrew/bin/brew ]; then
   brew update
   brew install ${formulae[@]}
   brew cleanup
+else
+  git clone --depth=1 https://github.com/mattmc3/antidote.git ${ZDOTDIR:-~}/.antidote  
+  sudo apt install fzf
 fi
