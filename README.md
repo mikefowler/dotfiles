@@ -36,3 +36,7 @@ Any of the following can be installed by running `brew install --cask [name]`:
 - [signal](https://signal.org)
 - [whatsapp](https://whatsapp.com)
 - [chatgpt](https://chatgpt.com/)
+- [transmission](https://transmissionbt.com/)
+- [soulseek](https://www.slsknet.org/)
+- [logi-options+](https://www.logitech.com/en-us/software/logi-options-plus.html)
+- [focusrite-control](https://focusrite.com/en)
